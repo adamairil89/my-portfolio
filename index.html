@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adam Airil | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        cyber: {
+                            bg: '#030712',
+                            surface: 'rgba(10, 15, 30, 0.7)',
+                            border: 'rgba(0, 242, 254, 0.2)',
+                            primary: '#00f2fe',
+                            secondary: '#9d4edd',
+                            success: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-slate-200 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+
+    <!-- Interactive Mesh Backdrop -->
+    <div class="fixed inset-0 -z-50 overflow-hidden bg-[#020512]">
+        <canvas id="particleCanvas" class="absolute inset-0 opacity-40"></canvas>
+        <div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-cyan-900/10 blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-purple-900/10 blur-[120px]"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 w-full border-b border-slate-800/40 bg-slate-950/60 backdrop-blur-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+            <a href="#" class="font-display text-xl font-bold tracking-tight text-white transition-colors hover:text-cyan-400" id="navBrand">Adam Airil</a>
+            <div class="hidden items-center gap-8 text-sm font-medium text-slate-400 md:flex">
+                <a href="#about" class="transition-colors hover:text-white">About</a>
+                <a href="#experience" class="transition-colors hover:text-white">Experience</a>
+                <a href="#projects" class="transition-colors hover:text-white">Projects</a>
+                <a href="#skills" class="transition-colors hover:text-white">Skills & Certs</a>
+                <a href="#interact" class="transition-colors hover:text-white">Interact</a>
+            </div>
+            <div>
+                <button onclick="toggleResumeModal(true)" id="navResumeBtn" class="rounded-full border border-cyan-500/30 bg-cyan-950/30 px-5 py-2 font-display text-xs font-semibold uppercase tracking-wider text-cyan-400 transition-all hover:bg-cyan-400 hover:text-slate-950 hover:shadow-[0_0_15px_rgba(0,242,254,0.4)]">
+                    Resume
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="relative flex min-h-[calc(100vh-73px)] items-center justify-center px-6 py-20 text-center">
+        <div class="max-w-3xl">
+            <h1 class="font-display text-6xl font-bold tracking-tight text-white sm:text-8xl" id="heroName">...</h1>
+            <p class="mx-auto mt-6 max-w-xl text-lg text-slate-400 sm:text-xl" id="heroSubtitle">...</p>
+            <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <a href="#projects" class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-3.5 font-display text-sm font-medium text-slate-950 transition-all hover:opacity-90 hover:shadow-[0_0_25px_rgba(0,242,254,0.4)]">View Projects</a>
+                <a href="#" id="heroResumeBtn" target="_blank" class="rounded-full border border-slate-700 bg-slate-900/50 px-8 py-3.5 font-display text-sm font-medium text-white transition-all hover:bg-slate-800 hover:border-slate-600">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="mx-auto max-w-5xl px-6 py-24 scroll-mt-20">
+        <div class="glassmorphism rounded-2xl p-8 md:p-12">
+            <h2 class="font-display text-3xl font-bold text-white tracking-tight">About Me</h2>
+            <div class="mt-8 space-y-6 text-base leading-relaxed text-slate-300">
+                <p id="aboutPassion" class="text-lg font-medium text-cyan-300/90 border-l-2 border-cyan-500/50 pl-4"></p>
+                <p id="aboutEducation"></p>
+                <p id="aboutActivities"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Experience Section -->
+    <section id="experience" class="mx-auto max-w-5xl px-6 py-24 scroll-mt-20">
+        <h2 class="font-display text-3xl font-bold text-white tracking-tight">Experience</h2>
+        <div class="relative mt-12 border-l border-slate-800 ml-4 md:ml-32" id="timelineContainer"></div>
+    </section>
+
+    <!-- 4. Projects Section -->
+    <section id="projects" class="mx-auto max-w-6xl px-6 py-24 scroll-mt-20">
+        <h2 class="font-display text-3xl font-bold text-white tracking-tight">Projects</h2>
+        <div class="mt-12 flex flex-col items-center justify-center relative min-h-[500px]" id="featuredProjectWrapper"></div>
+        <div class="mt-32 flex items-center justify-between border-b border-slate-800/60 pb-4">
+            <h3 class="font-display text-xl font-bold text-white">Other Noteworthy Work</h3>
+            <button onclick="toggleArchiveModal(true)" class="text-sm font-medium text-cyan-400 transition-colors hover:text-cyan-300 underline underline-offset-4">Archive Project List</button>
+        </div>
+        <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2" id="noteworthyGrid"></div>
+    </section>
+
+    <!-- 5. Skills & Certs Section -->
+    <section id="skills" class="py-24 scroll-mt-20">
+        <div class="mx-auto max-w-5xl px-6">
+            <h2 class="font-display text-3xl font-bold text-white tracking-tight">Skills & Credentials</h2>
+            <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+                <div class="glassmorphism rounded-xl p-6">
+                    <h3 class="font-display text-md font-bold tracking-wide uppercase text-emerald-400 mb-4">Data Analytics & Science</h3>
+                    <div class="flex flex-wrap gap-2" id="skillsAnalytics"></div>
+                </div>
+                <div class="glassmorphism rounded-xl p-6">
+                    <h3 class="font-display text-md font-bold tracking-wide uppercase text-blue-400 mb-4">Artificial Intelligence</h3>
+                    <div class="flex flex-wrap gap-2" id="skillsAI"></div>
+                </div>
+                <div class="glassmorphism rounded-xl p-6">
+                    <h3 class="font-display text-md font-bold tracking-wide uppercase text-purple-400 mb-4">Software & DB Engineering</h3>
+                    <div class="flex flex-wrap gap-2" id="skillsEngineering"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-20 w-full overflow-hidden border-y border-slate-800/40 bg-slate-950/30 py-10">
+            <div class="ticker-wrap">
+                <div class="ticker-inner" id="certTicker"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Interact Section -->
+    <section id="interact" class="mx-auto max-w-3xl px-6 py-32 text-center scroll-mt-20">
+        <h2 class="font-display text-3xl font-bold text-white tracking-tight">Interact</h2>
+        <p class="mt-4 text-slate-400">Select an icon below to contact me directly or explore my source code channels.</p>
+        <div class="mt-10 flex items-center justify-center gap-8">
+            <button onclick="toggleContactForm(true)" class="group flex h-14 w-14 items-center justify-center rounded-full bg-cyan-500 text-slate-950 transition-all hover:scale-110 hover:shadow-[0_0_20px_rgba(0,242,254,0.6)]" title="Open Contact Form">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </button>
+            <a id="linkGithub" href="#" target="_blank" class="flex h-14 w-14 items-center justify-center rounded-full border border-slate-800 bg-slate-900/60 text-slate-400 transition-all hover:border-slate-600 hover:text-white hover:scale-105" title="GitHub">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.061.069-.061 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+            </a>
+            <a id="linkLinkedin" href="#" target="_blank" class="flex h-14 w-14 items-center justify-center rounded-full border border-slate-800 bg-slate-900/60 text-slate-400 transition-all hover:border-slate-600 hover:text-white hover:scale-105" title="LinkedIn">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a id="linkPhone" href="#" class="flex h-14 w-14 items-center justify-center rounded-full border border-slate-800 bg-slate-900/60 text-slate-400 transition-all hover:border-slate-600 hover:text-white hover:scale-105" title="Call Me">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Modals Base -->
+    <div id="contactModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 px-4 backdrop-blur-sm">
+        <div class="w-full max-w-md rounded-2xl border border-slate-800 bg-slate-900/90 p-6 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <h3 class="font-display text-lg font-bold text-white">Send Direct Message</h3>
+                <button onclick="toggleContactForm(false)" class="text-slate-400 hover:text-white">&times;</button>
+            </div>
+            <form id="emailForm" class="mt-4 space-y-4 text-left">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400">Your Email</label>
+                    <input type="email" required class="mt-1 w-full rounded-lg border border-slate-800 bg-slate-950 px-4 py-2.5 text-sm text-slate-200 outline-none focus:border-cyan-500" placeholder="name@domain.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400">Message Text</label>
+                    <textarea required rows="4" class="mt-1 w-full rounded-lg border border-slate-800 bg-slate-950 px-4 py-2.5 text-sm text-slate-200 outline-none focus:border-cyan-500" placeholder="Type your portfolio message here..."></textarea>
+                </div>
+                <button type="submit" class="w-full rounded-lg bg-cyan-500 py-3 font-display text-sm font-semibold text-slate-950 transition-colors hover:bg-cyan-400">Dispatch Email</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="archiveModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/80 px-4 backdrop-blur-sm">
+        <div class="w-full max-w-4xl max-h-[85vh] overflow-y-auto rounded-2xl border border-slate-800 bg-slate-900/95 p-6 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div>
+                    <h3 class="font-display text-xl font-bold text-white">Full Project Registry</h3>
+                    <p class="text-xs text-slate-400 mt-1">A structured directory of academic, interview, and professional deliverables</p>
+                </div>
+                <button onclick="toggleArchiveModal(false)" class="text-2xl text-slate-400 hover:text-white">&times;</button>
+            </div>
+            <div class="mt-6 overflow-x-auto">
+                <table class="w-full border-collapse text-left text-sm text-slate-300">
+                    <thead>
+                        <tr class="border-b border-slate-800 text-xs font-semibold uppercase tracking-wider text-slate-400">
+                            <th class="py-3 px-4">Year</th>
+                            <th class="py-3 px-4">Project Title</th>
+                            <th class="py-3 px-4">Skills Applied</th>
+                            <th class="py-3 px-4 text-right">Link Repository</th>
+                        </tr>
+                    </thead>
+                    <tbody id="archiveTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume PDF Viewer Modal -->
+    <div id="resumeModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/85 px-4 backdrop-blur-md">
+        <div class="flex h-[90vh] w-full max-w-5xl flex-col rounded-2xl border border-slate-800 bg-slate-900 shadow-2xl overflow-hidden">
+            
+            <!-- Modal Header with Download & Close buttons -->
+            <div class="flex items-center justify-between border-b border-slate-800 bg-slate-950/70 px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <a id="resumeDownloadBtn" href="#" download class="inline-flex items-center gap-2 rounded-lg bg-cyan-500 px-4 py-2 font-display text-xs font-semibold text-slate-950 transition-colors hover:bg-cyan-400">
+                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        Download CV
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <span class="font-display text-sm font-semibold text-slate-300">Curriculum Vitae</span>
+                    <button onclick="toggleResumeModal(false)" class="text-2xl text-slate-400 hover:text-white transition-colors">&times;</button>
+                </div>
+            </div>
+
+            <!-- Embedded PDF Viewer Container -->
+            <div class="relative flex-1 w-full bg-slate-950">
+                <iframe id="resumeViewerFrame" class="h-full w-full border-0" src=""></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/particles.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

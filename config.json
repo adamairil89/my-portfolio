@@ -1,0 +1,100 @@
+{
+  "hero": {
+    "name": "Adam Airil",
+    "subtitle": "Bridging Data Analytics with Artificial Intelligence to build scalable, and data-driven solutions.",
+    "resumeUrl": "assets/Adam_Airil_Resume.pdf"
+  },
+  "about": {
+    "passion": "I am an AI and Data Professional focused on bridging deep data analytics with machine learning pipelines. I transform messy organizational and operational datasets into clean architectural insights, prioritizing security, structural integrity, and computational efficiency.",
+    "education": "Master by Research in Information and Communication Technology student at Universiti Teknikal Malaysia Melaka (UTeM), continuing from my BSc. in Artificial Intelligence with a CGPA of 3.96. Recipient of the Vice Chancellor’s Award, a straight Dean's List achiever (Semesters 1-6), and Gold Award winner at the Workshop 2 Innovation Competition.",
+    "activities": "Active technical contributor and leader within the UTeM ecosystem. Served as a planning committee member for the Code Challenge Arena, competitor in Hackathon FTMK, and an active team comrade for Faculty Ultras. Experienced public speaker, representing my cohort as the Dean's List student speaker and working as an emcee for formal faculty programs and the campus Neon Run."
+  },
+  "timeline": [
+    {
+      "date": "Oct 2024 - Mar 2025",
+      "position": "Web Developer Intern",
+      "organization": "CyberSecurity Malaysia",
+      "description": "Engineered a secure Data Privacy Assessment Web Application Prototype using PHP, SQL, and AJAX to evaluate sensitive data risks across complex organizational profiles. Authored comprehensive User Requirement Specifications (URS) and Concept Design (CD) technical system documentation."
+    },
+    {
+      "date": "Nov 2021 - Jul 2023",
+      "position": "Treasurer",
+      "organization": "Faculty of ICT Student Association (FICTS), UTeM",
+      "description": "Managed corporate financial budgeting and real-time ledger tracking for over 70 faculty programs, achieving a net surplus outcome of RM4,000. Spearheaded a massive faculty jacket sales project for 180+ students, generating RM1,800 in net profits."
+    },
+    {
+      "date": "Nov 2021 - Nov 2022",
+      "position": "Multimedia Executive Committee",
+      "organization": "Faculty of ICT Student Association (FICTS), UTeM",
+      "description": "Led end-to-end visual identity and digital branding projects for over 10 large-scale faculty events. Managed corporate social media channels, designed promotional photography layouts, and produced promotional event trailers."
+    }
+  ],
+  "projects": {
+    "featured": [
+      {
+        "title": "Alteryx & Tableau Data Analysis",
+        "description": "An end-to-end operational intelligence project built during a corporate recruitment interview task. Engineered an automated data preprocessing, cleaning, and feature extraction pipeline in Alteryx. Developed an interactive Tableau tracking dashboard that reduced business performance processing overheads by 40%.",
+        "skills": ["Alteryx", "Tableau", "Data Cleaning", "Data Extraction", "EDA"],
+        "githubUrl": "",
+        "tableauUrl": "https://public.tableau.com/views/SriAngkasaTuitionCentreInsights/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+        "snapshotImage": "assets/angkasa_dashboard.jpeg"
+      },
+      {
+        "title": "Alteryx & Tableau Data Analysis",
+        "description": "An end-to-end operational intelligence project built during a corporate recruitment interview task. Engineered an automated data preprocessing, cleaning, and feature extraction pipeline in Alteryx. Developed an interactive Tableau tracking dashboard that reduced business performance processing overheads by 40%.",
+        "skills": ["Alteryx", "Tableau", "Data Cleaning", "Data Extraction", "EDA"],
+        "githubUrl": "https://www.linkedin.com/in/adam-airil/",
+        "tableauUrl": "https://public.tableau.com/views/SriAngkasaTuitionCentreInsights/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
+        "snapshotImage": "assets/angkasa_dashboard.jpeg"
+      }
+    ],
+    "noteworthy": [
+      {
+        "title": "Comparative Analysis of Word Embedding Techniques (FYP)",
+        "description": "A comprehensive comparative natural language processing research study exploring GloVe, FastText, and Word2Vec models across multi-domain textual data. Optimized vector model selection mechanics, accelerating text-processing efficiency by 30%.",
+        "skills": ["Python", "Keras", "Scikit-Learn", "Word Embeddings"],
+        "projectUrl": "https://github.com/yourusername/fyp-word-embeddings"
+      },
+      {
+        "title": "Sign Language-Speech Translator",
+        "description": "An AI-powered computer vision system capable of translating American Sign Language (ASL) gestures into audible synthesized speech in real time. Built using deep deep-learning architectures, obtaining an 89% tracking accuracy matrix.",
+        "skills": ["TensorFlow", "OpenCV", "MediaPipe", "Computer Vision"],
+        "projectUrl": "https://github.com/yourusername/sign-language-translator"
+      },
+      {
+        "title": "Comparative Analysis of Word Embedding Techniques (FYP)",
+        "description": "A comprehensive comparative natural language processing research study exploring GloVe, FastText, and Word2Vec models across multi-domain textual data. Optimized vector model selection mechanics, accelerating text-processing efficiency by 30%.",
+        "skills": ["Python", "Keras", "Scikit-Learn", "Word Embeddings"],
+        "projectUrl": "https://github.com/yourusername/fyp-word-embeddings"
+      }
+    ],
+    "archive": [
+      { "year": "2025", "title": "Data Privacy Assessment App", "skills": "PHP, MySQL, AJAX, Risk Metrics", "url": "https://github.com/yourusername" },
+      { "year": "2024", "title": "Alteryx & Tableau Dashboard", "skills": "Alteryx, Tableau, Pipeline Design", "url": "https://github.com/yourusername" },
+      { "year": "2024", "title": "Word Embedding Comparison (FYP)", "skills": "Python, Keras, Scikit-Learn, NLP", "url": "https://github.com/yourusername" },
+      { "year": "2024", "title": "Sign Language Translator AI", "skills": "TensorFlow, OpenCV, MediaPipe", "url": "https://github.com/yourusername" },
+      { "year": "2024", "title": "Code Challenge Arena Landing Module", "skills": "HTML5, Tailwind CSS, JavaScript", "url": "https://github.com/yourusername" },
+      { "year": "2022", "title": "FTMK Hackathon Emergency Portal", "skills": "PHP, Bootstrap, Relational SQL", "url": "https://github.com/yourusername" }
+    ]
+  },
+  "skills": {
+    "analytics": ["SQL", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Tableau", "Power BI", "Alteryx", "R", "EDA"],
+    "ai": ["Machine Learning", "Scikit-Learn", "Regression Algorithms", "Clustering", "Model Evaluation", "Computer Vision", "Keras", "TensorFlow"],
+    "engineering": ["Python", "Git/GitHub", "Streamlit", "MySQL", "Database Schema (ERD)", "Object-Oriented Design (UML)"]
+  },
+  "certificates": [
+    { "name": "Google Data Analytics Professional", "image": "assets/G_Data Analytics_PC.jpg", "url": "https://coursera.org/share/6651c87ea81cfb1fde3d8fe150305dd6" },
+    { "name": "Google AI Professional", "image": "assets/G_AI_PC.jpg", "url": "https://coursera.org/share/95385011eb29817cd24c0df87877bc76" },
+    { "name": "Google AI Essentials", "image": "assets/G_AI Essentials_SC.jpg", "url": "https://coursera.org/share/62f21a0a0820c3472c6080a73007d180" },
+    { "name": "Google Prompting Essentials", "image": "assets/G_Prompting Essentials_SC.jpg", "url": "https://coursera.org/share/cea37ae46a18527b8cc4778f2116330d" },
+    { "name": "Altair Machine Learning", "image": "assets/ML_PC.jpg", "url": "https://openbadgepassport.com/app/badge/info/616333" },
+    { "name": "Altair Data Engineering", "image": "assets/DE_PC.jpg", "url": "https://openbadgepassport.com/app/badge/info/616331" },
+    { "name": "Altair Applications & Use Case", "image": "assets/A&UC_PC.jpg", "url": "https://openbadgepassport.com/app/badge/info/616329" }
+  ],
+  "interact": {
+    "email": "adamairil09@gmail.com",
+    "github": "https://github.com/adamairil89",
+    "linkedin": "https://www.linkedin.com/in/adam-airil/",
+    "phone": "+60196440363"
+  }
+}

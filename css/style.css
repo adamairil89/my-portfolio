@@ -1,0 +1,50 @@
+body {
+    background-color: #020617;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.glassmorphism {
+    background: rgba(8, 14, 28, 0.65);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glassmorphism:hover {
+    border-color: rgba(0, 242, 254, 0.25);
+    box-shadow: 0 0 25px rgba(0, 242, 254, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-glow {
+    text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
+}
+
+/* Horizontal animation for certificate carousel */
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.ticker-wrap {
+    overflow: hidden;
+    width: 100%;
+}
+
+.ticker-inner {
+    display: flex;
+    width: max-content;
+    animation: ticker 45s linear infinite;
+}
+
+.ticker-inner:hover {
+    animation-play-state: paused;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #020617; }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #00f2fe; }
