@@ -33,48 +33,80 @@
     "featured": [
       {
         "title": "Alteryx & Tableau Data Analysis",
-        "description": "An end-to-end operational intelligence project built during a corporate recruitment interview task. Engineered an automated data preprocessing, cleaning, and feature extraction pipeline in Alteryx. Developed an interactive Tableau tracking dashboard that reduced business performance processing overheads by 40%.",
+        "description": [
+          "Built an end-to-end operational intelligence workflow during a corporate recruitment interview task.",
+          "Engineered an automated data preprocessing, cleaning, and feature extraction pipeline in Alteryx.",
+          "Developed an interactive Tableau tracking dashboard that reduced business performance processing overheads by 40%."
+        ],
         "skills": ["Alteryx", "Tableau", "Data Cleaning", "Data Extraction", "EDA"],
         "githubUrl": "",
         "tableauUrl": "https://public.tableau.com/views/SriAngkasaTuitionCentreInsights/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-        "snapshotImage": "assets/angkasa_dashboard.jpeg"
+        "snapshotImage": "assets/project/demo_angkasa.gif"
       },
       {
-        "title": "Alteryx & Tableau Data Analysis",
-        "description": "An end-to-end operational intelligence project built during a corporate recruitment interview task. Engineered an automated data preprocessing, cleaning, and feature extraction pipeline in Alteryx. Developed an interactive Tableau tracking dashboard that reduced business performance processing overheads by 40%.",
-        "skills": ["Alteryx", "Tableau", "Data Cleaning", "Data Extraction", "EDA"],
-        "githubUrl": "https://www.linkedin.com/in/adam-airil/",
-        "tableauUrl": "https://public.tableau.com/views/SriAngkasaTuitionCentreInsights/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
-        "snapshotImage": "assets/angkasa_dashboard.jpeg"
+        "title": "E-Commerce Financial EDA & Tableau Dashboard",
+        "description": [
+          "Cleaned and reconciled over 800,000 transaction records using Python to eliminate operational revenue leakage.",
+          "Engineered a data cleaning pipeline to detect ghost orders, remove non-product charges, and segment wholesale buyers.",
+          "Built an interactive Tableau dashboard tracking $17.17M in revenue, order growth trends, and regional performance."
+        ],
+        "skills": ["Python", "Pandas", "Tableau", "Data Cleaning", "EDA", "Financial Analytics"],
+        "githubUrl": "https://github.com/adamairil89/e-commerce-financial-analytics",
+        "tableauUrl": "https://public.tableau.com/app/profile/adam.airil.yusof/viz/EDA-dashboard/Dashboard1?publish=yes",
+        "snapshotImage": "assets/project/demo_ecommerce.gif"
+      },
+      {
+        "title": "Malaysia Rail Ridership Analytics",
+        "description": [
+          "Engineered an end-to-end data pipeline processing national rail commuter records from data.gov.my.",
+          "Cleaned raw daily transit logs and created analytical monthly views in PostgreSQL to handle null values.",
+          "Loaded aggregated datasets into Google BigQuery to serve as a cloud data warehouse layer.",
+          "Built a Star Schema model and authored DAX time-intelligence measures in Power BI for YoY growth tracking."
+        ],
+        "skills": ["PostgreSQL","Google BigQuery","Power BI","DAX","Data Modeling","ETL Pipeline"],
+        "githubUrl": "https://github.com/adamairil89/malaysia-rail-transit-analytics",
+        "tableauUrl": "",
+        "snapshotImage": "assets/project/demo_ridership.gif"
+      },
+      {
+        "title": "Customer Support Process Reperformance & RPA Pipeline",
+        "description": [
+          "Conducted a process reperformance audit on 8,469 customer support records to identify human data entry errors.",
+          "Built a Python evaluation engine benchmarking rigid, fuzzy (RapidFuzz), and hybrid semantic (Sentence Transformers) NLP models.",
+          "Automated end-to-end data ingestion and script execution using Power Query ETL and Power Automate Desktop.",
+          "Engineered an interactive Excel dashboard with dynamic KPI cards, a risk matrix, and slicers to flag operational risks."
+        ],
+        "skills": ["Python","Power Automate Desktop","Excel Power Query","NLP","Sentence Transformers","RapidFuzz","Process Audit","KPI Dashboards"],
+        "githubUrl": "https://github.com/adamairil89/cust-ticket-ai-reperformance-analytics",
+        "tableauUrl": "",
+        "snapshotImage": "assets/project/demo_ticket.gif"
       }
     ],
     "noteworthy": [
       {
         "title": "Comparative Analysis of Word Embedding Techniques (FYP)",
-        "description": "A comprehensive comparative natural language processing research study exploring GloVe, FastText, and Word2Vec models across multi-domain textual data. Optimized vector model selection mechanics, accelerating text-processing efficiency by 30%.",
+        "description": [
+          "A comprehensive comparative natural language processing research study exploring GloVe, FastText, and Word2Vec models across multi-domain textual data.", 
+          "Optimized vector model selection mechanics, accelerating text-processing efficiency by 30%."
+        ],
         "skills": ["Python", "Keras", "Scikit-Learn", "Word Embeddings"],
-        "projectUrl": "https://github.com/yourusername/fyp-word-embeddings"
+        "projectUrl": "https://github.com/adamairil89/fyp-word-embeddings"
       },
       {
         "title": "Sign Language-Speech Translator",
-        "description": "An AI-powered computer vision system capable of translating American Sign Language (ASL) gestures into audible synthesized speech in real time. Built using deep deep-learning architectures, obtaining an 89% tracking accuracy matrix.",
+        "description": [
+          "An AI-powered computer vision system capable of translating American Sign Language (ASL) gestures into audible synthesized speech in real time.", 
+          "Built using deep deep-learning architectures, obtaining an 89% tracking accuracy matrix."
+        ],
         "skills": ["TensorFlow", "OpenCV", "MediaPipe", "Computer Vision"],
-        "projectUrl": "https://github.com/yourusername/sign-language-translator"
-      },
-      {
-        "title": "Comparative Analysis of Word Embedding Techniques (FYP)",
-        "description": "A comprehensive comparative natural language processing research study exploring GloVe, FastText, and Word2Vec models across multi-domain textual data. Optimized vector model selection mechanics, accelerating text-processing efficiency by 30%.",
-        "skills": ["Python", "Keras", "Scikit-Learn", "Word Embeddings"],
-        "projectUrl": "https://github.com/yourusername/fyp-word-embeddings"
+        "projectUrl": "https://github.com/adamairil89/action-recognition-app"
       }
     ],
     "archive": [
-      { "year": "2025", "title": "Data Privacy Assessment App", "skills": "PHP, MySQL, AJAX, Risk Metrics", "url": "https://github.com/yourusername" },
-      { "year": "2024", "title": "Alteryx & Tableau Dashboard", "skills": "Alteryx, Tableau, Pipeline Design", "url": "https://github.com/yourusername" },
-      { "year": "2024", "title": "Word Embedding Comparison (FYP)", "skills": "Python, Keras, Scikit-Learn, NLP", "url": "https://github.com/yourusername" },
-      { "year": "2024", "title": "Sign Language Translator AI", "skills": "TensorFlow, OpenCV, MediaPipe", "url": "https://github.com/yourusername" },
-      { "year": "2024", "title": "Code Challenge Arena Landing Module", "skills": "HTML5, Tailwind CSS, JavaScript", "url": "https://github.com/yourusername" },
-      { "year": "2022", "title": "FTMK Hackathon Emergency Portal", "skills": "PHP, Bootstrap, Relational SQL", "url": "https://github.com/yourusername" }
+      { "year": "2026", "title": "Flood Disaster Management System", "skills": "TBA", "url": "https://github.com/adamairil89?tab=repositories" },
+      { "year": "2025", "title": "Food Finder App", "skills": "TBA", "url": "https://github.com/adamairil89?tab=repositories" },
+      { "year": "2025", "title": "Rabiah Health Monitoring System", "skills": "TBA", "url": "https://github.com/adamairil89?tab=repositories" },
+      { "year": "2023", "title": "Sentiment Analysis App", "skills": "TBA", "url": "https://github.com/adamairil89?tab=repositories" }
     ]
   },
   "skills": {
@@ -83,13 +115,13 @@
     "engineering": ["Python", "Git/GitHub", "Streamlit", "MySQL", "Database Schema (ERD)", "Object-Oriented Design (UML)"]
   },
   "certificates": [
-    { "name": "Google Data Analytics Professional", "image": "assets/G_Data Analytics_PC.jpg", "url": "https://coursera.org/share/6651c87ea81cfb1fde3d8fe150305dd6" },
-    { "name": "Google AI Professional", "image": "assets/G_AI_PC.jpg", "url": "https://coursera.org/share/95385011eb29817cd24c0df87877bc76" },
-    { "name": "Google AI Essentials", "image": "assets/G_AI Essentials_SC.jpg", "url": "https://coursera.org/share/62f21a0a0820c3472c6080a73007d180" },
-    { "name": "Google Prompting Essentials", "image": "assets/G_Prompting Essentials_SC.jpg", "url": "https://coursera.org/share/cea37ae46a18527b8cc4778f2116330d" },
-    { "name": "Altair Machine Learning", "image": "assets/ML_PC.jpg", "url": "https://openbadgepassport.com/app/badge/info/616333" },
-    { "name": "Altair Data Engineering", "image": "assets/DE_PC.jpg", "url": "https://openbadgepassport.com/app/badge/info/616331" },
-    { "name": "Altair Applications & Use Case", "image": "assets/A&UC_PC.jpg", "url": "https://openbadgepassport.com/app/badge/info/616329" }
+    { "name": "Google Data Analytics Professional", "image": "assets/cert/G_Data Analytics_PC.jpg", "url": "https://coursera.org/share/6651c87ea81cfb1fde3d8fe150305dd6" },
+    { "name": "Google AI Professional", "image": "assets/cert/G_AI_PC.jpg", "url": "https://coursera.org/share/95385011eb29817cd24c0df87877bc76" },
+    { "name": "Google AI Essentials", "image": "assets/cert/G_AI Essentials_SC.jpg", "url": "https://coursera.org/share/62f21a0a0820c3472c6080a73007d180" },
+    { "name": "Google Prompting Essentials", "image": "assets/cert/G_Prompting Essentials_SC.jpg", "url": "https://coursera.org/share/cea37ae46a18527b8cc4778f2116330d" },
+    { "name": "Altair Machine Learning", "image": "assets/cert/ML_PC.jpg", "url": "https://openbadgepassport.com/app/badge/info/616333" },
+    { "name": "Altair Data Engineering", "image": "assets/cert/DE_PC.jpg", "url": "https://openbadgepassport.com/app/badge/info/616331" },
+    { "name": "Altair Applications & Use Case", "image": "assets/cert/A&UC_PC.jpg", "url": "https://openbadgepassport.com/app/badge/info/616329" }
   ],
   "interact": {
     "email": "adamairil09@gmail.com",
